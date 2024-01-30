@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.main {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
+.numbers{
+    height: 100%;
+    width: 60%;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bt{
+    font-size: 50px;
+    height: 150px;
+    width: 30%;
+    background-color: yellow;
+    border-radius:50%;
+    margin: 2px;
+}
+.opp{
+    font-size: 50px;
+    height: 150px;
+    width: 30%;
+    background-color: yellow;
+    border-radius:50%;
+    margin: 2px;
+}
+.opperations{
+    height: 100%;
+    width: 400px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+}
