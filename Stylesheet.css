@@ -9,36 +9,16 @@
     align-items: center;
     background-color: lightgray;
 }
-.numbers{
-    height: 100%;
-    width: 60%;
-    margin-top: 30px;
+.continer{
+    background-color: blue;
     flex-wrap: wrap;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 900px;
+    height: 800px;
 }
-.bt{
-    font-size: 50px;
-    height: 150px;
-    width: 30%;
-    background-color: yellow;
-    border-radius:50%;
-    margin: 2px;
-}
-.opp{
-    font-size: 50px;
-    height: 150px;
-    width: 30%;
-    background-color: yellow;
-    border-radius:50%;
-    margin: 2px;
-}
-.opperations{
-    height: 100%;
-    width: 400px;
-    margin-top: 30px;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
+.numbers{
+    height:60px;
+    width: 30px;
 }
