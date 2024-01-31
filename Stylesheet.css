@@ -33,7 +33,7 @@
     padding-left:none;
 }
 
-.num,.opp{
+.num,.opp,.result{
     height: 80px;
     width: 150px;
     border-radius: 50%;
@@ -49,5 +49,7 @@
     flex-direction: column;
     padding-right: none;
 } 
-
+.result{
+    background-color: yellow;
+}
 
