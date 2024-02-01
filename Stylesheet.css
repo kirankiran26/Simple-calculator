@@ -9,13 +9,13 @@
     flex-wrap: wrap;
 }
 .main{
-    margin-top:250px;
+   margin-top: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     background-color: lightcyan;
-    height: 600px;;
+    height: 700px;;
 }
 .calculator{
     width: 500px;
@@ -23,6 +23,7 @@
      justify-content: center; 
      align-items: center; 
     flex-wrap: wrap;
+    
 }
 
 .numbers{
@@ -33,13 +34,18 @@
     padding-left:none;
 }
 
-.num,.opp,.result{
+.num,
+.opp,
+.result
+{
+    border: 2px solid black;
+    margin: 2px;
     height: 80px;
     width: 150px;
     border-radius: 50%;
     font-size:35px;
-    border: none;
-    color:black;
+    color: black;
+    background-color:white;
 }
 .operators{
     display: flex;
@@ -53,9 +59,10 @@
     background-color: yellow;
 }
 .resultdiv{
-    height: 150px;
+    height: 130px;
     width: 400px;
-    margin-bottom: 90px;
+    margin-bottom:60px;
+    margin-top: 60px;
     font-size:35px;
     border: none;
     color:black;
