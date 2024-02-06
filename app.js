@@ -1,45 +1,38 @@
-let numbut = document.querySelectorAll(".num ,.result");
+let numbut = document.querySelectorAll(".num, .result");
 let eq = "";
-let resultdivbt=document.querySelector(".resultdiv");
+let resultdivbt = document.querySelector(".resultdiv");
+
 numbut.forEach(btt => {
     btt.addEventListener("click", () => {
-        if (btt.innerText==='=') {
-            resultdivbt.append(btt.innerText)
-            let result=tocalculatetheresult(eq);
-            resultdivbt.append(result)
+        if (btt.innerText === '=') {
+            let result = tocalculatetheresult(eq);
+            resultdivbt.innerText = eq + '=' + result;
+            eq = result.toString();  // Reset eq to the calculated result if user want to cont calculation 
+            console.log(eq);
+        } else if (btt.innerText === 'AC') {
+            resultdivbt.innerText = "";
+            eq = "";
+        } else {
+            resultdivbt.innerText += btt.innerText;
+            eq += btt.innerText;
         }
-        else if (btt.innerText==='AC') {
-            resultdivbt.innerText="";
-        }
-        else {
-            resultdivbt.append(btt.innerText)
-            eq = eq + btt.innerText;
-        } 
     });
 });
+
 const tocalculatetheresult = (eq) => {
-    let lo=replacingxtostarformuti(eq);
-    let result;
     try {
-        result = eval(lo);
+        let lo = replaceXtoStarForMultiplication(eq);
+        let result = eval(lo);
         if (!Number.isFinite(result)) {
-            result = "Error";
+            throw new Error("Invalid result");
         }
+        return result;
     } catch (error) {
-        result = "Error";
-        console.error("Invalid expression:", error);
+        console.error("Invalid expression:", error.message);
+        return "Error";
     }
-    return result;
 };
-const replacingxtostarformuti=(eq)=>{
-   let replacedst="";
-   for(let i=0;i<eq.length;i++) {
-    if (eq.charAt(i)==='x') {
-        replacedst+='*';
-    }
-    else{
-        replacedst+=eq.charAt(i);
-    }
-   }
-   return replacedst;
+
+const replaceXtoStarForMultiplication = (eq) => {
+    return eq.replace(/x/g, '*').replace(/÷/g, '/');
 };
